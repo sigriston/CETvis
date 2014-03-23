@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CETvis</title>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" media="all" />
+
+</head>
+<body>
+  <div class='container-fluid'>
+    <h1><a href="https://github.com/sigriston/CETvis">CETvis</a> - visualização de dados da <a href="http://www.cetsp.com.br">CET-SP</a></h1>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Visualizações Geográficas</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          Localização geográfica de ocorrências diversas relativas à segurança no trânsito.
+        </p>
+        <p>
+          As ocorrências aparecem como marcadores distribuídos pelo mapa, agrupados por
+          proximidade e com cores indicando a frequência espacial dessas ocorrências.
+        </p>
+      </div>
+      <div class="list-group">
+        <a href="apps/mapa-acidentes" class="list-group-item">
+          <h4 class="list-group-item-heading">Mapa de Acidentes</h4>
+          <p class="list-group-item-text">
+            Localização geográfica de todas as ocorrências do 1o. semestre de 2013.
+            É possível filtrar por gravidade da vítima (ferida ou fatal), bem como
+            faixas de dias da semana e faixas de horários das ocorrências.
+          </p>
+        </a>
+        <a href="apps/mapa-semaforos" class="list-group-item">
+          <h4 class="list-group-item-heading">Mapa de Sinalização</h4>
+          <p class="list-group-item-text">
+            Localização geográfica das ocorrências de manutenção de equipamentos de
+            sinalização de trânsito. É possível filtrar por causa da falha, família da
+            falha (tipo do equipamento) e por faixas de tempo de espera para o reparo
+            (em horas).
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Visualizações Estatísticas</h3>
+      </div>
+      <div class="panel-body">
+        <p>
+          Gráficos variados descritivos das estatísticas relativas à segurança
+          do trânsito, bem como tabelas indexadas para os dados representados.
+        </p>
+      </div>
+      <div class="list-group">
+        <a href="apps/boxplot2" class="list-group-item">
+          <h4 class="list-group-item-heading">Vítimas x Tipo</h4>
+          <p class="list-group-item-text">
+            Número de vítimas por dia ao longo do tempo, separadamente para cada tipo
+            de vítima (condutor, passageiro ou pedestre).
+          </p>
+          <p class="list-group-item-text">
+            <em>Boxplot</em> da distribuição do número de vítimas por dia, separadamente
+            para cada dia da semana.
+          </p>
+        </a>
+        <a href="apps/boxplot3" class="list-group-item">
+          <h4 class="list-group-item-heading">Vítimas x Escolaridade</h4>
+          <p class="list-group-item-text">
+            Número de vítimas por dia ao longo do tempo, separadamente para cada nível
+            de escolaridade da vítima.
+          </p>
+          <p class="list-group-item-text">
+            <em>Boxplot</em> da distribuição do número de vítimas por dia, separadamente
+            para cada dia da semana.
+          </p>
+        </a>
+        <a href="apps/boxplot3c" class="list-group-item">
+          <h4 class="list-group-item-heading">Vítimas x Escolaridade do Condutor</h4>
+          <p class="list-group-item-text">
+            Número de vítimas por dia ao longo do tempo, separadamente para cada nível
+            de escolaridade do condutor.
+          </p>
+          <p class="list-group-item-text">
+            <em>Boxplot</em> da distribuição do número de vítimas por dia, separadamente
+            para cada dia da semana.
+          </p>
+        </a>
+        <a href="apps/boxplot3y" class="list-group-item">
+          <h4 class="list-group-item-heading">Vítimas x Escolaridade x Semestre</h4>
+          <p class="list-group-item-text">
+            Número de vítimas por dia ao longo do tempo, separadamente para cada nível
+            de escolaridade da vítima ou condutor, ano e semestre.
+          </p>
+          <p class="list-group-item-text">
+            <em>Boxplot</em> da distribuição do número de vítimas por dia, separadamente
+            para cada dia da semana.
+          </p>
+          <p class="list-group-item-text">
+            Há também um terceiro gráfico ilustrando a tendência do número de vítimas
+            por dia ao longo do tempo, separadamente para cada nível de escolaridade
+            da vítima ou condutor.
+          </p>
+        </a>
+        <a href="apps/boxplot4" class="list-group-item">
+          <h4 class="list-group-item-heading">Boxplot Vítimas x Escolaridade</h4>
+          <p class="list-group-item-text">
+            Conjunto de <em>boxplots</em> da distribuição do número de vítimas por dia,
+            separadamente para cada nível de escolaridade do condutor ou vítima e para
+            cada dia da semana.
+          </p>
+        </a>
+        <a href="apps/boxplot4-semaforo" class="list-group-item">
+          <h4 class="list-group-item-heading">Boxplot de Falhas de Equipamento de Sinalização</h4>
+          <p class="list-group-item-text">
+            Conjunto de <em>boxplots</em> da distribuição do tempo em horas entre a
+            detecção da falha do equipamento de sinalização até o seu reparo, separadamente
+            por: prioridade, família da falha (tipo do equipamento) e causa da falha.
+          </p>
+        </a>
+        <a href="apps/calendar1" class="list-group-item">
+          <h4 class="list-group-item-heading">Calendário de Vítimas x Escolaridade</h4>
+          <p class="list-group-item-text">
+            "Calendário de calor" do número de vítimas por dia, separadamente por nível de
+            escolaridade da vítima ou condutor.
+          </p>
+          <p class="list-group-item-text">
+            Cores quentes indicam uma maior frequência de ocorrências.
+          </p>
+        </a>
+        <a href="apps/calendar1-tipoacidente" class="list-group-item">
+          <h4 class="list-group-item-heading">Calendário de Vítimas x Tipo de Acidente</h4>
+          <p class="list-group-item-text">
+            "Calendário de calor" do número de vítimas por dia, separadamente por tipo de
+            acidente (colisão, atropelamento, queda etc).
+          </p>
+          <p class="list-group-item-text">
+            Cores quentes indicam uma maior frequência de ocorrências.
+          </p>
+        </a>
+        <a href="apps/calendar1-tipoveic" class="list-group-item">
+          <h4 class="list-group-item-heading">Calendário de Vítimas x Tipo de Veículo</h4>
+          <p class="list-group-item-text">
+            "Calendário de calor" do número de vítimas por dia, separadamente por tipo de
+            veículo envolvido na ocorrência.
+          </p>
+          <p class="list-group-item-text">
+            Cores quentes indicam uma maior frequência de ocorrências.
+          </p>
+        </a>
+        <a href="apps/loess1" class="list-group-item">
+          <h4 class="list-group-item-heading">Tendência de Acidentes x Tipo de Veículo</h4>
+          <p class="list-group-item-text">
+            Tendência de número de ocorrências por dia, por tipo de veículo envolvido.
+          </p>
+        </a>
+        <a href="apps/loess2" class="list-group-item">
+          <h4 class="list-group-item-heading">Tendência de Acidentes x Idade</h4>
+          <p class="list-group-item-text">
+            Tendência do número total de ocorrências, por idade do condutor ou da vítima.
+          </p>
+        </a>
+        <a href="apps/barra1" class="list-group-item">
+          <h4 class="list-group-item-heading">Barras: Vítimas x Escolaridade</h4>
+          <p class="list-group-item-text">
+            Gráfico de barras (proporções ou frequências) do número de vítimas por dia
+            da semana e nível de escolaridade do condutor ou da vítima.
+          </p>
+        </a>
+        <a href="apps/barra-colisao" class="list-group-item">
+          <h4 class="list-group-item-heading">Barras: Vítimas x Tipo de Acidente</h4>
+          <p class="list-group-item-text">
+            Gráfico de barras (proporções ou frequências) do número de vítimas por dia
+            da semana e tipo de acidente (colisão, atropelamento, queda etc).
+          </p>
+        </a>
+        <a href="apps/barra-semaforo" class="list-group-item">
+          <h4 class="list-group-item-heading">Barras: Falhas de Equipamento de Sinalização</h4>
+          <p class="list-group-item-text">
+            Gráfico de barras (proporções ou frequências) do número de ocorrências de
+            manutenção de equipamento de sinalização de trânsito por dia da semana
+            da semana e tipo de ocorrência (emergencial, corretiva etc).
+          </p>
+        </a>
+      </div>
+    </div>
+    <footer>
+    <p>
+      <small>(c) Equipe Number Crunchers, 2014. <a href="http://opensource.org/licenses/MIT">Licença MIT.</a></small>
+    </p>
+    </footer>
+  </div>
+</body>
+</html>

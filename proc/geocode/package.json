@@ -1,0 +1,14 @@
+{
+  "name": "geocode",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Thiago Massariolli Sigrist",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^0.2.10",
+    "csv": "^0.3.7",
+    "lodash": "^2.4.1",
+    "node-geocoder": "^2.0.0"
+  }
+}

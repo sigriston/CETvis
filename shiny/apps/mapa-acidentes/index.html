@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Mapa de acidentes de São Paulo</title>
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../bower_components/dcjs/dc.css" type="text/css"/>
+  <link rel="stylesheet" href="../../bower_components/leaflet/dist/leaflet.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../bower_components/leaflet.markercluster/dist/MarkerCluster.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="../../bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" type="text/css" media="all" />
+
+  <style type="text/css" media="screen">
+    #map {
+      height: 200px;
+      width: 100%;
+    }
+    #map-toolbar {
+      top: 12px;
+    }
+    #weekday-barchart {
+      height: 120px;
+    }
+    #hour-barchart {
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <h1>Mapa de acidentes de São Paulo</h1>
+    </div>
+    <div id="map-toolbar" class="col-md-5">
+      <div class="btn-toolbar pull-right" role="toolbar">
+        <div class="btn-group btn-group-lg">
+          <button id="home-button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span></button>
+          <button id="reset-button" type="button" class="btn btn-default">Limpa Filtros</button>
+
+          <div class="btn-group btn-group-lg">
+            <button id="flt-menu" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span id="flt-menu-text">Feridas e Fatais</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a id="flt-menu-feridas" href="#">Feridas</a></li>
+              <li><a id="flt-menu-fatais" href="#">Fatais</a></li>
+              <li><a id="flt-menu-ambas" href="#">Feridas e Fatais</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <label class="barchart-label">Acidentes por dia da semana</label>
+      <div id="weekday-barchart"></div>
+    </div>
+    <div class="col-md-8">
+      <label class="barchart-label">Acidentes por faixa horária</label>
+      <div id="hour-barchart"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script src="../../bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/d3/d3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/crossfilter/crossfilter.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/dcjs/dc.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/leaflet/dist/leaflet.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/leaflet-providers/leaflet-providers.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../bower_components/leaflet.markercluster/dist/leaflet.markercluster.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mapa-acidentes.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
