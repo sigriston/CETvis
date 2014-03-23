@@ -38,7 +38,7 @@ Porém, foi necessário um preprocessamento dos dados para a obtenção de coord
 
 Foi ainda utilizado o [Crossfilter](http://square.github.io/crossfilter/) para realizar a filtragem multidimensional dos dados. Como se não bastasse, usamos ainda a biblioteca [dc.js](http://dc-js.github.io/dc.js/) para oferecer gráficos dimensionais capazes não só de oferecer visualizações dos dados, como também servir de controles para os filtros dimensionais do Crossfilter.
 
-O uso integrado de dc.js com Crossfilter e Leaflet foi fortemente inspirado por [este tutorial](http://jeromegagnonvoyer.wordpress.com/2013/04/17/creating-a-data-visualization-tool-using-d3-js-crossfilter-and-leaflet-js/) encontrado no blog de [Jerôme Gagnon-Voyer](http://jeromegagnonvoyer.wordpress.com), apesar de ele não usar dc.js.
+O uso integrado de dc.js com Crossfilter e Leaflet foi fortemente inspirado por [este tutorial](http://jeromegagnonvoyer.wordpress.com/2013/04/17/creating-a-data-visualization-tool-using-d3-js-crossfilter-and-leaflet-js/) encontrado no blog de [Jérôme Gagnon-Voyer](http://jeromegagnonvoyer.wordpress.com), apesar de ele não usar dc.js.
 
 Finalmente, a camada vetorial representando a área da Grande São Paulo foi obtida através do uso da ferramenta [GDAL/OGR](http://www.gdal.org/ogr/) sobre o conjunto de figuras [ne_10m_urban_areas](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-urban-area/) da [Natural Earth](http://www.naturalearthdata.com), uma fonte completamente livre de dados geográficos e cartográficos.
 
