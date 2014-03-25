@@ -5,7 +5,7 @@ library(grid)
 library(gridExtra)
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 # numero de vitimas feridas por dia, por tipo_vitima (CD, PS, PD, OU, SI)
@@ -18,7 +18,7 @@ dadosMortas <- aggregate(merged$classificacao,by=list(merged$diasem,merged$dia,m
 dadosFM <- dadosMortas[,1:3]
 dadosFM$x <- dadosFeridas$x+dadosMortas$x
 
-    
+
 shinyServer(function(input, output) {
 
     # seleciona a classificacao da vitima baseado no input do usuario
@@ -38,8 +38,8 @@ shinyServer(function(input, output) {
                "Todos"=c("CD","PD","PS","SI")
         )
     })
-     
-   
+
+
     output$countPlot <- renderPlot({
 
         dataN <- datasetInput()
@@ -63,7 +63,7 @@ shinyServer(function(input, output) {
                                       labels=comma)
         gg <- gg + labs(x="", y="# vítimas", title="Total de Vítimas (por dia)", color="Dia da Semana")
         gg <- gg + theme_bw()
-    
+
         # boxplots mostrando a distribuição do total de vítimas por dia, separadamente para cada dia da semana
         gg2 <- ggplot(data=dataN, aes(dataN[,1], dataN[,4]), environment=environment())
         gg2 <- gg2 + geom_boxplot(aes(fill=dataN[,1]))
@@ -77,7 +77,7 @@ shinyServer(function(input, output) {
 
         print(grid.arrange(gg, gg2, ncol=1))
     })
-   
+
     output$guardianTable = renderDataTable({
 
         # planilha com os dados usados nos gráficos
@@ -85,7 +85,7 @@ shinyServer(function(input, output) {
         var1 <- varInput()
 
         dataN <- dataN[dataN[,3]==var1,]
-        colnames(dataN) <- c("Dia da Semana", "Dia", "Tipo de Vitima", "Total de Vítimas")
+        colnames(dataN) <- c("Dia da Semana", "Dia", "Tipo de Vítima", "Total de Vítimas")
         return(dataN)
     })
 

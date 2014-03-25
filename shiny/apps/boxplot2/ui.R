@@ -12,7 +12,7 @@ shinyUI(
                         choices = c("Feridas", "Fatais","Feridas ou Fatais")),
             selectInput("tipo", "Tipo de vítima:",
                         choices = c("Todos","Condutor", "Passageiro","Pedestre","Sem Informação")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
