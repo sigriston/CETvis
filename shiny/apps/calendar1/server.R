@@ -5,9 +5,9 @@ library(grid)
 library(gridExtra)
 
 
-source("../functions/calendarHeat2.R")
+source("functions/calendarHeat2.R")
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 shinyServer(function(input, output) {
