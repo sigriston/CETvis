@@ -19,6 +19,9 @@ R -e "install.packages('ggmap', repos='http://cran.rstudio.com/')"
 # Install gridExtra
 R -e "install.packages('gridExtra', repos='http://cran.rstudio.com/')"
 
+# Install devtools
+R -e "install.packages('devtools', repos='http://cran.rstudio.com/')"
+
 # Install rCharts
 R -e "options(repos=structure(c(CRAN='http://cran.rstudio.com/')));devtools::install_github('ramnathv/rCharts')"
 
