@@ -5,7 +5,7 @@ library(grid)
 library(gridExtra)
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 # numero de vitimas feridas por dia, por escolaridade do condutor (1 a 8)
