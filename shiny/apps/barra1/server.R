@@ -3,7 +3,7 @@ library(rCharts)
 library(scales)
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 merged$escolaridade.y <- factor(merged$escolaridade.y,

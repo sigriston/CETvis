@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(
 
     pageWithSidebar(
-       
+
 
         headerPanel("Vítimas por dia - 2011, 2012 e 2013-1S"),
 
@@ -15,7 +15,7 @@ shinyUI(
                         choices=c("Condutor","Vítima")),
             selectInput("estat","Estatística",
                         choices=c("Frequência","Proporção")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
