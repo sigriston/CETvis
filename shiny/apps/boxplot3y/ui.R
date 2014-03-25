@@ -20,7 +20,7 @@ shinyUI(
                         choices=c("2011","2012","2013")),
             selectInput("semestre","Semestre:",
                         choices=c("Primeiro","Segundo","Ambos")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
