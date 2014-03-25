@@ -2,7 +2,7 @@ library(shiny)
 library(rCharts)
 library(scales)
 
-load("../dados/talao-local-falha.rda")
+load("dados/talao-local-falha.rda")
 
 talao$data_origem_sem <- weekdays(talao$data_origem)
 
