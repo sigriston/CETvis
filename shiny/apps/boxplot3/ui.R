@@ -14,7 +14,7 @@ shinyUI(
                         choices = c( "Todas","Analfabeto", "Primeiro Grau Incompleto", "Primeiro Grau Completo",
                                     "Segundo Grau Incompleto", "Segundo Grau Completo", "Superior Incompleto",
                                     "Superior Completo", "Sem informações")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
