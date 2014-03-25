@@ -3,7 +3,7 @@ library(rCharts)
 library(scales)
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 merged$tipo_acidente <- factor(merged$tipo_acidente,levels=c("AA","AT","CF","CH",
