@@ -5,7 +5,7 @@ library(gridExtra)
 
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 merged$idadec <- ifelse(merged$idade_condutor=="SI",NA,merged$idade_condutor)
 
