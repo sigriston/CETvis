@@ -25,5 +25,8 @@ packer_cache
 # ignora dados originais
 proc/dados
 
+# ignora shinyapps
+shinyapps
+
 # OS X stuff
 .DS_Store
