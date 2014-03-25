@@ -5,7 +5,7 @@ library(gridExtra)
 
 
 
-load("../dados/Acidentes00.rda")
+load("dados/Acidentes00.rda")
 
 
 

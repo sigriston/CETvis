@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(
 
     pageWithSidebar(
-       
+
 
         headerPanel("Ocorrências por dia - 2011, 2012, 2013-1S"),
 
@@ -14,7 +14,7 @@ shinyUI(
                             "Moto Táxi","Ônibus Fretado","Ônibus Urbano","Microonibus",
                             "Van","VUC","Caminhonete","Carreta",
                             "Jipe","Outros","Sem Informação")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
