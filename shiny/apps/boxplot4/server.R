@@ -5,7 +5,7 @@ library(grid)
 library(gridExtra)
 
 
-load("../dados/Merged.rda")
+load("dados/Merged.rda")
 
 
 
