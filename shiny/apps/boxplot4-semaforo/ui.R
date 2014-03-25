@@ -12,7 +12,7 @@ shinyUI(
                         choices = c( "Prioridade",
                "Família da falha",
                "Causa da Falha")),
-            HTML("<label><a href='../../'>Voltar para página inicial.</a></label>")
+            HTML("<label><a href='http://sigriston.github.io/CETvis/'>Voltar para página inicial.</a></label>")
         ),
 
         mainPanel(
