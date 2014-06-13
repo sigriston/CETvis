@@ -222,6 +222,17 @@
                         title: title
                     };
                     var marker = new L.marker(latlng, options);
+
+                    // Dispara Modal com Street View ao clicar em marcador
+                    marker.on('click', function() {
+                        $('#googleStreetView').data('lat', pt.lat);
+                        $('#googleStreetView').data('lng', pt.lon);
+                        $('#googleStreetView').css({
+                            height: $('body').height() - 150
+                        });
+                        $('#streetViewModal').modal('show');
+                    });
+
                     markers.addLayer(marker);
                 });
 
@@ -238,5 +249,23 @@
         if (!err) {
             geoSP.addData(geo);
         }
+    });
+
+    $('#streetViewModal').on('shown.bs.modal', function() {
+        var modalBody = $('.modal-body')[0];
+        $('#googleStreetView').css({
+            width: modalBody.clientWidth - 40
+        });
+
+        var panoramaLatLng = new google.maps.LatLng(
+            $('#googleStreetView').data('lat'),
+            $('#googleStreetView').data('lng')
+        );
+        var googlePanorama = new google.maps.StreetViewPanorama(
+            document.getElementById('googleStreetView'),
+            {
+                position: panoramaLatLng
+            }
+        );
     });
 }());

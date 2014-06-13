@@ -75,6 +75,20 @@
   </div>
 </div>
 
+<div class="modal fade" id="streetViewModal" role="dialog" data-backdrop="static" aria-labelledby="streetViewModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="streetViewModalLabel">Street View</h4>
+      </div>
+      <div class="modal-body">
+        <div id="googleStreetView"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="../../bower_components/jquery/dist/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../bower_components/d3/d3.min.js" type="text/javascript" charset="utf-8"></script>
@@ -83,6 +97,7 @@
 <script src="../../bower_components/leaflet/dist/leaflet.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../bower_components/leaflet-providers/leaflet-providers.js" type="text/javascript" charset="utf-8"></script>
 <script src="../../bower_components/leaflet.markercluster/dist/leaflet.markercluster.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="js/mapa-acidentes.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
