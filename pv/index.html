@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <title>Mapa de acidentes de São Paulo</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/dc/1.6.0/dc.css" type="text/css"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" type="text/css" media="all" />
+
+  <style type="text/css" media="screen">
+    #map {
+      height: 200px;
+      width: 100%;
+    }
+    #map-toolbar {
+      top: 12px;
+    }
+    #weekday-barchart {
+      height: 120px;
+    }
+    #hour-barchart {
+      height: 120px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-7">
+      <h1>Mapa de acidentes da Av. Paulista</h1>
+    </div>
+    <div id="map-toolbar" class="col-md-5">
+      <div class="btn-toolbar pull-right" role="toolbar">
+        <div class="btn-group btn-group-lg">
+          <button id="home-button" type="button" class="btn btn-default"><span class="glyphicon glyphicon-home"></span></button>
+          <button id="reset-button" type="button" class="btn btn-default">Limpa Filtros</button>
+
+          <div class="btn-group btn-group-lg">
+            <button id="flt-menu" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <span id="flt-menu-text">Feridas e Fatais</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a id="flt-menu-feridas" href="#">Feridas</a></li>
+              <li><a id="flt-menu-fatais" href="#">Fatais</a></li>
+              <li><a id="flt-menu-ambas" href="#">Feridas e Fatais</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+      <label class="barchart-label">Acidentes por dia da semana</label>
+      <div id="weekday-barchart"></div>
+    </div>
+    <div class="col-md-8">
+      <label class="barchart-label">Acidentes por faixa horária</label>
+      <div id="hour-barchart"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.3/d3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.1/crossfilter.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/dc/1.6.0/dc.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../vendor/js/leaflet-providers.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/mapa-acidentes.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
